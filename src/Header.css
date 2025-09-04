@@ -1,9 +1,14 @@
 .header {
-    background-color: #206278;
+    background-color: #9fc8d5;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
+}
+
+.letra {
+    color: black;
 }
 
 .header-nav {

@@ -3,6 +3,9 @@ import { AuthProvider } from './contexts/AuthContext'; // Importe o AuthProvider
 import { useAuth } from './contexts/AuthContext'; // Importe o hook useAuth
 import LoginPage from './views/LoginPage';
 import MainPage from './views/MainPage';
+import UserProfileForm from './views/UserProfilePage';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,13 +16,23 @@ function App() {
 }
 
 function AuthContent() {
-  const { user } = useAuth(); // Agora o useAuth() deve retornar o valor correto
-
+  const { user } = useAuth(); 
   return (
     <>
-      {user ? <MainPage /> : <LoginPage />}
+      {user ?
+                <Routes>
+                  <Route index element={<MainPage />} />
+                  <Route path="/user-prof" element={<UserProfileForm />} />
+                  
+    
+                </Routes>
+     
+       : 
+      
+      <LoginPage />}
     </>
   );
+  
 }
 
 export default App;

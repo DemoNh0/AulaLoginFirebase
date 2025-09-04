@@ -24,7 +24,7 @@ function Header({ pageTitle }) {
                 </NavLink>
             </div>
 
-            <h1>{pageTitle}</h1>
+            <h1 className='letra'>{pageTitle}</h1>
 
             <div className="header-user">
                 {user && (

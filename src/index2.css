@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Text:ital,wght@0,400;0,600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #f5f0e6; /* bege claro para texto */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #4b3b2b 0%, #3a2e22 100%); /* marrom escuro */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 40px 80px;
+  overflow-y: auto;
+}
+
+.container {
+  background-color: #7c6848; /* bege escuro */
+  width: 100%;
+  max-width: 1200px;
+  padding: 80px 80px 100px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.6rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-align: center;
+  color: #f5f0e6;
+  user-select: none;
+  margin-bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #f5f0e6;
+  user-select: none;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  border: 2px solid #f5f0e6;
+  background-color: #4b3b2b;
+  color: #f5f0e6;
+  transition: border-color 0.3s ease;
+  outline-offset: 0;
+  resize: vertical;
+  user-select: text;
+  box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #d7c6aa;
+  background-color: #5e4f3a;
+  outline: none;
+  box-shadow: none;
+}
+
+button.btn {
+  background-color: #f5f0e6;
+  border: none;
+  color: #4b3b2b;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 14px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.08em;
+  user-select: none;
+  box-shadow: none;
+  margin-top: 20px;
+  max-width: 180px;
+  align-self: center;
+}
+
+button.btn:hover {
+  background-color: #e8e3d8;
+}
+
+button.btn:active {
+  transform: scale(0.98);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: -14px;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+a.link {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f5f0e6;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.25s ease;
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+a.link:hover {
+  color: #d7c6aa;
+  text-decoration: underline;
+}
+
+/* Responsivo */
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90vw;
+    padding: 60px 40px 80px;
+    gap: 36px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    font-size: 1.05rem;
+  }
+
+  button.btn {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 20px 60px;
+    gap: 28px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
